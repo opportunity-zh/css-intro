@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML & CSS</title>
+
+    <!-- CSS -->
+    <style>
+      body {
+        background-color: #9f9f9f;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+        margin: 0;
+        padding: 0;
+      }
+
+      main {
+        display: flex;
+        flex-direction: column;
+
+        padding: 12px;
+      }
+
+      /* text */
+      .title {
+        font-size: 120px;
+        font-weight: bold;
+        margin: 0;
+      }
+
+      .paragraph {
+        color: #000;
+
+        &.dark-mode {
+          color: #eee;
+        }
+      }
+
+      .text-size-small {
+        font-size: 16px;
+      }
+      .text-size-medium {
+        font-size: 24px;
+      }
+
+      .text-size-large {
+        font-size: 36px;
+      }
+
+      /* layout */
+      .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+
+        height: 300px;
+        width: 100%;
+
+        margin-bottom: 12px;
+      }
+
+      .box {
+        box-sizing: border-box;
+        height: 100%;
+        width: 100%;
+
+        padding: 12px;
+
+        background-color: #00ffbf;
+      }
+      .box h2 {
+        margin: 0;
+      }
+
+      .bg-red {
+        background-color: #ff0000;
+      }
+
+      #box-1 {
+        box-sizing: border-box;
+        height: 100%;
+        width: 100%;
+
+        padding: 12px;
+
+        color: #eee;
+        background-color: #0d2927;
+      }
+
+      #box-2 {
+        box-sizing: border-box;
+        height: 100%;
+        width: 100%;
+
+        padding: 12px;
+
+        color: #eee;
+        background-color: #515e78;
+      }
+
+      h2 {
+        margin: 0;
+        font-size: 32px;
+      }
+
+      /* animation */
+      .animate-text-color {
+        color: #fff;
+        animation: animate 1s linear infinite;
+      }
+
+      .animate-text-rotate {
+        animation: rotate 5s linear infinite;
+        transform-origin: center;
+      }
+
+      .animate-text-wiggle {
+        animation: wiggle 1s ease-in-out infinite;
+      }
+
+      .animate-text-shake:hover {
+        cursor: pointer;
+        animation: shake 0.25s ease-in-out infinite;
+      }
+
+      .animate-text-all {
+        animation: animate 1s linear infinite, rotate 5s linear infinite,
+          wiggle 1s ease-in-out infinite, shake 1s ease-in-out infinite;
+        transform-origin: center;
+      }
+
+      @keyframes animate {
+        0% {
+          color: #fff;
+        }
+        50% {
+          color: #000;
+        }
+        100% {
+          color: #fff;
+        }
+      }
+
+      @keyframes rotate {
+        0% {
+          transform: rotate(0deg);
+        }
+        50% {
+          transform: rotate(180deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      @keyframes wiggle {
+        0% {
+          transform: translateX(12px);
+        }
+        50% {
+          transform: translateX(-12px);
+        }
+        100% {
+          transform: translateX(12px);
+        }
+      }
+
+      @keyframes shake {
+        0% {
+          transform: translate(9px, 3px);
+        }
+        50% {
+          transform: translate(-9px, -3px);
+        }
+        100% {
+          transform: translate(9px, 3px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <!-- Heading -->
+      <h1 class="title animate-text-shake">Hello World</h1>
+      <!-- Paragraph -->
+      <p class="paragraph text-size-large dark">
+        As a coder, I find joy in my work. It's like being an artist, but
+        instead of paint, I use code to create masterpieces. Every new project
+        is a blank canvas, waiting to be transformed. The thrill of coding lies
+        in the challenges it presents. Each line of code is a piece of a complex
+        puzzle. Debugging is like a detective game, testing patience and
+        perseverance. But the triumph when the code finally runs without errors
+        is unparalleled.
+
+        <span class="animate-text-color">I love coding.</span>
+      </p>
+
+      <p class="text-size-medium">
+        CSS classes are used to select the HTML elements we want to style.
+        Classes are declared in the HTML element's class attribute. To select an
+        element with a specific class, write a dot (.) character, followed by
+        the class we declare in the HTML element's class attribute.
+      </p>
+
+      <div class="container">
+        <div class="box"><h2>First Box</h2></div>
+        <div class="box bg-red"><h2>Second Box</h2></div>
+        <div class="box"><h2>Third Box</h2></div>
+      </div>
+
+      <div class="container">
+        <div id="box-1" class="bg-red">
+          <h2>I have the ID box-1</h2>
+          <p class="text-size-medium">
+            CSS Id selectors are used to select the element with a unique id. To
+            select an element with a specific id, write a hash (#) character,
+            followed by the id we declare in the HTML element's id attribute.
+            Ids are stronger than classes. If an element has both an id and a
+            class, the properties of the id will override the properties of the
+            class.
+          </p>
+        </div>
+        <div id="box-2">
+          <h2>I have the ID box-2</h2>
+          <p>
+            CSS element selectors are used to select HTML elements based on the
+            element name. To select an element with a specific element name,
+            write the element name. Be careful when using element selectors, as
+            they select all elements of that type. For example, if you use the
+            element selector to select the h2 element, all h2 elements on the
+            page will be selected.
+          </p>
+        </div>
+      </div>
+      <div class="container">
+        <div
+          class="box"
+          style="background: linear-gradient(90deg, #00c9ff 0%, #92fe9d 100%)"
+        >
+          <h2>Inline Styles</h2>
+          <p>
+            Inline styles are used to style directly on the HTML element. This
+            has the highest priority, and will override any other styling.
+          </p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
