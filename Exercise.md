@@ -85,7 +85,7 @@ Instructions:
         - Add an animation name rotate with a duration of 5s linear infinite.
         - Add transform-origin: center to the class.
         - Create an animation (@keyframe) called rotate for rotation:
-          - Set a tranform rotate of 0deg at 0%
+          - Set a transform rotate of 0deg at 0%
           - set a transform rotate of 180deg at 50%
           - Set a transform rotate of 360deg at 100%
 
