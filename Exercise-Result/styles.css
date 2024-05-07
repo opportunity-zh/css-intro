@@ -177,5 +177,5 @@ h2 {
 
 .animate-mix {
   transform-origin: center;
-  animation: color 1s linear infinite, rotate 5s linear infinite;
+  animation: color 1s linear infinite, wiggle 3s linear infinite;
 }

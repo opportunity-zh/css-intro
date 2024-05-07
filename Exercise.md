@@ -106,14 +106,13 @@ Instructions:
           - Set a transform translate of 9px, 3px at 100%
       - Create a class .animate-mix:
         - Add transform-orign: center to the class.
-        - Add both animation color and rotate, comma-separated, to the class.
+        - Add both animation color and wiggle, comma-separated, to the class.
         - Color has a duration of 1s linear infinite.
-        - rotate has a duration of 5s linear infinite.
+        - wiggle has a duration of 5s linear infinite.
 
 13. Testing and Customization:
 
     - Test your webpage to ensure it displays as intended.
-    - Add classes to the HTML elements to apply the styles you've created or modify the CSS selectors to match the HTML elements.
     - Feel free to customize the content and apply your own creativity while adhering to the provided guidelines.
 
     Try to accomplish the exercise without looking at the final CSS code provided earlier. Once you've completed the exercise, you can compare your solution to the final CSS code to see how closely you matched the desired styles and animations.
